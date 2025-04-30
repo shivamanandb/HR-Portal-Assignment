@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/employee-details.css">
+    <title>HR Portal - Employee-Details</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logout-btn">
+            <button class="btn btn-clr" id="logout">
+                <i class="fas fa-sign-out"></i> Logout
+            </button>
+        </div>
+        <div class="heading">
+            <h2>EMPLOYEES DATA</h2>
+            <p><i>This is the list of all Employees. You can add new Employees, edit and delete existing ones</i></p>
+        </div>
+
+        <div class="add-employee">
+            <button class="btn" id="add-employee"><i class="fa-solid fa-plus"></i> Add Employee</button>
+        </div>
+
+        <!-- Create new Employee Modal  -->
+        <div class="modal-container" id="modal_container">
+            <div class="modal">
+                <div class="close-btn">
+                    <i id="close-btn" class="fa-solid fa-xmark close"></i>
+                </div>
+                <div class="error-section">
+                    <!-- Errors will be handled here through javascript -->
+                </div>
+                <h1>Add New Employee</h1>
+                <form class="form-data" id="add-employee-form">
+                    
+                    <div class="input-style">
+                        <label for="name">Employee Name:</label>
+                        <input type="name" id="name" name="name" placeholder="Enter Employee Name">
+                    </div>
+
+                    <div class="input-style">
+                        <label for="department"> Department:</label>
+                        <input type="department" id="department" name="department" placeholder="Enter Department Name">
+                    </div>
+
+                    <div class="input-style">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter Email">
+                    </div>
+
+                    <div class="input-style">
+                        <label for="salary">Salary:</label>
+                        <input type="salary" id="salary" name="salary" placeholder="Enter Salary">
+                    </div>
+
+                    <button type="submit" class="btn">Save</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Edit Employee Modal  -->
+        <div class="modal-container" id="edit_container">
+            <div class="modal">
+                <div class="close-btn">
+                    <i id="edit-close-btn" class="fa-solid fa-xmark close"></i>
+                </div>
+                <div class="error-section">
+                    <!-- Errors will be handled here through javascript -->
+                </div>
+                <h1>Update Employee Details</h1>
+                <form class="form-data" id="updation-form">
+                    
+                    <div class="input-style">
+                        <label for="update-name">Employee Name:</label>
+                        <input type="name" id="update-name" name="name" placeholder="Enter Employee Name">
+                    </div>
+
+                    <div class="input-style">
+                        <label for="update-department"> Department:</label>
+                        <input type="department" id="update-department" name="department" placeholder="Enter Department Name">
+                    </div>
+
+                    <div class="input-style">
+                        <label for="update-email">Email:</label>
+                        <input type="email" id="update-email" name="email" placeholder="Enter Email">
+                    </div>
+
+                    <div class="input-style">
+                        <label for="update-salary">Salary:</label>
+                        <input type="salary" id="update-salary" name="salary" placeholder="Enter Salary">
+                    </div>
+
+                    <button type="submit" class="btn">Save</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Delete Employee Modal  -->
+        <div class="modal-container" id="delete-container">
+            <div class="modal">
+                <h2>Do you want delete this data ?</h2>
+                <div class="btn-container">
+                    <button class="btn del-btn" id="yes-btn">Yes</button>
+                    <button class="btn del-btn" id="no-btn">No</button>
+                </div>
+            </div>
+        </div>
+
+        <table class="table-data">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Email</th>
+                    <th>Salary</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody class="table-body">
+                <!-- Rows will be dynamically populated by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    <script src="/js/employee-details.js"></script>
+    <script src="/js/endoints/addEmployeeAPI.js"></script>
+    <script src="/js/endoints/fetchEmployeesAPI.js"></script>
+    <script src="/js/endoints/updateEmployeeDetailsAPI.js"></script>
+    <script src="/js/endoints/deleteEmployeeAPI.js"></script>
+</body>
+
+</html>

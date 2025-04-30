@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Login - HR Portal</title>
+</head>
+<body>
+    <div class="error-section">
+        <!-- Errors will be handled here through javascript -->
+    </div>
+    <div class="container">
+        <div class="heading">
+            <h1>Log in to your account</h1>
+            <p>Welcome to HR Log In Portal</p>
+        </div>
+
+        <form class="form-section">
+            <label for="email">Email:<br>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+            </label>
+
+            <label for="password">Password:<br>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+            </label>
+
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+        <p class="registration-text">Don't have an account?   <a href="/html/register.html">Register here</a></p>
+
+    </div>
+    <script src="/js/login.js"></script>
+    <script src="/js/endoints/loginAPI.js"></script>
+</body>
+</html>
