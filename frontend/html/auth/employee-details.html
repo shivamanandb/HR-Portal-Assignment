@@ -20,9 +20,24 @@
             <h2>EMPLOYEES DATA</h2>
             <p><i>This is the list of all Employees. You can add new Employees, edit and delete existing ones</i></p>
         </div>
-
-        <div class="add-employee">
-            <button class="btn" id="add-employee"><i class="fa-solid fa-plus"></i> Add Employee</button>
+        <br>
+        <div class="employee-handler">
+            <div class="no-of-records">
+                Records per page:
+                <select name="records" id="records">
+                    <option value="5">5</option>
+                    <option selected value="5">10</option>
+                    <option value="5">20</option>
+                    <option value="5">30</option>
+                </select>
+            </div>
+            <div class="search">
+                <label for="search-name">Search:</label>
+                <input type="text" id="search-name" placeholder="Enter name to Search...">
+            </div>
+            <div class="add-employee">
+                <button class="btn" id="add-employee"><i class="fa-solid fa-plus"></i> Add Employee</button>
+            </div>
         </div>
 
         <!-- Create new Employee Modal  -->

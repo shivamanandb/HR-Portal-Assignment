@@ -176,3 +176,15 @@ logoutBtn.addEventListener('click', () => {
     localStorage.removeItem('user');
     window.location.href = '/html/login.html';
 })
+
+function filterTable(){
+    const nameFilter = document.getElementById('search-name').value.toLowerCase();
+    console.log(nameFilter)
+    const filterData = data.filter(record => {
+        const nameMatch = record.name.toLowerCase().includes(nameFilter);
+        return nameMatch;
+    })
+    return renderTable(filterData);
+}
+
+document.getElementById('search-name').addEventListener('input', filterTable);
